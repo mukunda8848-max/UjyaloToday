@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ujyaalo Today — Wireframes (Phase 2)</title>
+<style>
+  :root { --line:#9ca3af; --fill:#eef1f5; --fill2:#e2e6ec; --text:#4b5563; --label:#111827; }
+  * { box-sizing: border-box; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background:#f7f8fa; color:var(--text); margin:0; padding:32px; }
+  h1 { color:#111827; font-size:22px; margin:0 0 4px; }
+  .sub { color:#6b7280; margin:0 0 28px; font-size:13px; }
+  .screen { background:#fff; border:1px solid #d1d5db; border-radius:8px; margin:0 auto 40px; max-width:900px; overflow:hidden; box-shadow:0 1px 3px rgba(0,0,0,.06); }
+  .caption { background:#111827; color:#fff; padding:8px 14px; font-size:13px; font-weight:600; }
+  .bar { background:#f1f3f5; border-bottom:1px solid #e5e7eb; padding:6px 12px; font-size:11px; color:#9ca3af; font-family:monospace; }
+  .pad { padding:16px; }
+  .box { border:1px solid var(--line); background:var(--fill); border-radius:5px; display:flex; align-items:center; justify-content:center; text-align:center; color:var(--text); font-size:12px; padding:10px; }
+  .img { border:1px dashed var(--line); background:var(--fill2); position:relative; }
+  .img::after { content:"IMAGE"; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); font-size:11px; letter-spacing:1px; color:#9ca3af; }
+  .row { display:flex; gap:12px; }
+  .col { flex:1; }
+  .mt { margin-top:12px; }
+  .h { height:44px; }
+  .nav { display:flex; gap:10px; align-items:center; }
+  .logo { font-weight:700; color:#111827; font-size:15px; }
+  .pill { border:1px solid var(--line); border-radius:14px; padding:3px 12px; font-size:11px; background:#fff; }
+  .ad { border:1px dashed #b45309; background:#fff7ed; color:#b45309; font-weight:600; }
+  .grid3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; }
+  .card .img { height:80px; }
+  .card p { margin:6px 0 2px; height:8px; background:var(--fill2); border-radius:3px; }
+  .card p.short { width:60%; }
+  .btn { background:#111827; color:#fff; border-radius:5px; padding:8px 0; text-align:center; font-size:12px; }
+  .field { border:1px solid var(--line); background:#fff; border-radius:5px; height:34px; display:flex; align-items:center; padding:0 10px; font-size:11px; color:#9ca3af; }
+  .side { width:200px; }
+  .flex { display:flex; gap:16px; }
+  .label-sm { font-size:10px; text-transform:uppercase; letter-spacing:.5px; color:#9ca3af; margin-bottom:4px; }
+  .sidebarnav { background:#111827; color:#cbd5e1; width:180px; padding:14px; font-size:12px; }
+  .sidebarnav div { padding:8px 6px; border-radius:4px; }
+  .sidebarnav .active { background:#374151; color:#fff; }
+  .stat { border:1px solid var(--line); border-radius:6px; padding:14px; text-align:center; background:var(--fill); }
+  .stat b { display:block; font-size:20px; color:#111827; }
+  .stat span { font-size:11px; }
+</style>
+</head>
+<body>
+  <h1>Ujyaalo Today — Wireframes</h1>
+  <p class="sub">Phase 2 · low-fidelity layout sketches · grey boxes = placeholders for real content</p>
+
+  <!-- 1. HOMEPAGE -->
+  <div class="screen">
+    <div class="caption">1 · Public — Homepage</div>
+    <div class="bar">ujyaalotoday.com/</div>
+    <div class="pad">
+      <div class="nav" style="justify-content:space-between; border-bottom:1px solid #e5e7eb; padding-bottom:10px;">
+        <span class="logo">UJYAALO TODAY</span>
+        <div class="nav">
+          <span class="pill">Politics</span><span class="pill">Sports</span><span class="pill">World</span>
+          <span class="pill">🔍 Search</span><span class="pill">🌙</span><span class="pill">Login</span>
+        </div>
+      </div>
+      <div class="box ad mt" style="height:26px;">⚠ BREAKING NEWS TICKER (Milestone 3)</div>
+      <div class="row mt">
+        <div class="col" style="flex:2;"><div class="img" style="height:200px;"></div><div class="box mt">Featured headline (slider) — FR-1</div></div>
+        <div class="col"><div class="box" style="height:118px;">Latest updates<br>list — FR-2</div><div class="box ad mt" style="height:110px;">SIDEBAR AD</div></div>
+      </div>
+      <div class="box ad mt" style="height:60px;">LEADERBOARD AD (AdSense / banner) — FR-8, FR-9</div>
+      <div class="label-sm mt">Category section — FR-3</div>
+      <div class="grid3">
+        <div class="col card"><div class="img"></div><p></p><p class="short"></p></div>
+        <div class="col card"><div class="img"></div><p></p><p class="short"></p></div>
+        <div class="col card"><div class="img"></div><p></p><p class="short"></p></div>
+      </div>
+      <div class="row mt">
+        <div class="col box" style="height:70px;">📷 Photo gallery strip — FR-5</div>
+        <div class="col box" style="height:70px;">▶ Video strip — FR-6</div>
+      </div>
+      <div class="box mt" style="height:40px; background:#111827; color:#fff;">FOOTER — links · social · about</div>
+    </div>
+  </div>
+
+  <!-- 2. ARTICLE -->
+  <div class="screen">
+    <div class="caption">2 · Public — Article Detail</div>
+    <div class="bar">ujyaalotoday.com/article/budget-2082-highlights</div>
+    <div class="pad">
+      <div class="nav" style="justify-content:space-between; border-bottom:1px solid #e5e7eb; padding-bottom:10px;">
+        <span class="logo">UJYAALO TODAY</span><span class="pill">Menu</span>
+      </div>
+      <div class="flex mt">
+        <div style="flex:1;">
+          <div class="box" style="height:16px; justify-content:flex-start;">Home › Politics</div>
+          <div class="box mt" style="height:34px; font-size:15px; color:#111827; font-weight:700;">ARTICLE HEADLINE — FR-4</div>
+          <div class="box mt" style="height:16px; justify-content:flex-start; font-size:11px;">By Author · Date · Politics</div>
+          <div class="box mt"><span>🔗 Share:</span>&nbsp; Facebook · X · LinkedIn · WhatsApp &nbsp;— FR-31</div>
+          <div class="img mt" style="height:150px;"></div>
+          <div class="box mt" style="height:90px;">Article body text…</div>
+          <div class="box ad mt" style="height:50px;">IN-ARTICLE AD</div>
+          <div class="box mt" style="height:60px;">More article body…</div>
+          <div class="label-sm mt">Comments — FR-13</div>
+          <div class="field">Write a comment… (login required)</div>
+          <div class="box mt" style="height:60px; justify-content:flex-start; align-items:flex-start;">User comments list…</div>
+        </div>
+        <div class="side">
+          <div class="box ad" style="height:120px;">SIDEBAR AD</div>
+          <div class="box mt" style="height:120px;">Related / Most read</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. CATEGORY LISTING -->
+  <div class="screen">
+    <div class="caption">3 · Public — Category Listing / Search Results</div>
+    <div class="bar">ujyaalotoday.com/category/sports</div>
+    <div class="pad">
+      <div class="box" style="height:30px; font-size:15px; color:#111827; font-weight:700; justify-content:flex-start;">SPORTS — FR-3 / Search results — FR-7</div>
+      <div class="flex mt">
+        <div style="flex:1;">
+          <div class="row"><div class="col box" style="height:70px;">Article + thumbnail</div></div>
+          <div class="row mt"><div class="col box" style="height:70px;">Article + thumbnail</div></div>
+          <div class="row mt"><div class="col box" style="height:70px;">Article + thumbnail</div></div>
+          <div class="box mt" style="height:24px;">‹ 1 2 3 › pagination</div>
+        </div>
+        <div class="side"><div class="box ad" style="height:200px;">SIDEBAR AD</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. LOGIN -->
+  <div class="screen">
+    <div class="caption">4 · Public — Login / Register</div>
+    <div class="bar">ujyaalotoday.com/login</div>
+    <div class="pad" style="display:flex; justify-content:center;">
+      <div style="width:300px;">
+        <div class="box" style="height:24px; color:#111827; font-weight:700;">Login &nbsp;|&nbsp; Register</div>
+        <div class="label-sm mt">Name (register only)</div><div class="field">Full name</div>
+        <div class="label-sm mt">Email</div><div class="field">you@example.com</div>
+        <div class="label-sm mt">Password</div><div class="field">••••••••</div>
+        <div class="btn mt">Continue — FR-11, FR-12</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. ADMIN DASHBOARD -->
+  <div class="screen">
+    <div class="caption">5 · Admin — Dashboard</div>
+    <div class="bar">ujyaalotoday.com/admin</div>
+    <div style="display:flex;">
+      <div class="sidebarnav">
+        <div class="logo" style="color:#fff; margin-bottom:8px;">ADMIN</div>
+        <div class="active">Dashboard</div><div>Articles</div><div>Categories</div>
+        <div>Media</div><div>Ads</div><div>Comments</div><div>Users</div><div>Settings</div>
+      </div>
+      <div class="pad" style="flex:1;">
+        <div class="grid3">
+          <div class="stat"><b>128</b><span>Articles</span></div>
+          <div class="stat"><b>1.2k</b><span>Comments</span></div>
+          <div class="stat"><b>340</b><span>Users</span></div>
+        </div>
+        <div class="box mt" style="height:60px;">Recent activity / pending comments — FR-16, FR-23</div>
+        <div class="box mt" style="height:50px;">Quick actions: + New Article · + Upload Media · + New Ad</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. ARTICLE EDITOR -->
+  <div class="screen">
+    <div class="caption">6 · Admin — Article Editor</div>
+    <div class="bar">ujyaalotoday.com/admin/articles/new</div>
+    <div style="display:flex;">
+      <div class="sidebarnav">
+        <div class="logo" style="color:#fff; margin-bottom:8px;">ADMIN</div>
+        <div>Dashboard</div><div class="active">Articles</div><div>Categories</div>
+        <div>Media</div><div>Ads</div><div>Comments</div>
+      </div>
+      <div class="pad" style="flex:1;">
+        <div class="flex">
+          <div style="flex:2;">
+            <div class="label-sm">Title</div><div class="field">Article headline</div>
+            <div class="label-sm mt">Body (rich text editor)</div><div class="box mt" style="height:120px;">Write content here… — FR-17</div>
+          </div>
+          <div class="side">
+            <div class="label-sm">Type</div><div class="field">News ▾</div>
+            <div class="label-sm mt">Category</div><div class="field">Politics ▾</div>
+            <div class="label-sm mt">Featured image</div><div class="img" style="height:60px;"></div>
+            <div class="label-sm mt">Status</div><div class="field">Draft / Publish / Schedule ▾ — FR-28</div>
+            <div class="box mt" style="height:24px;">☐ Featured ☐ Pinned — FR-1, FR-27</div>
+            <div class="label-sm mt">SEO — FR-32</div><div class="field">Meta title / description</div>
+            <div class="btn mt">Save</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="sub" style="text-align:center; max-width:900px; margin:0 auto;">End of wireframes · Phase 2. These define structure only — visual design happens during implementation.</p>
+</body>
+</html>
