@@ -14,6 +14,9 @@ app.use("/api/auth", require("./routes/authRoutes"));
 app.use("/api/categories", require("./routes/categoryRoutes"));
 app.use("/api/articles", require("./routes/articleRoutes"));
 app.use("/api/admin", require("./routes/adminRoutes"));
+app.use("/api/comments", require("./routes/commentRoutes"));
+app.use("/api/media", require("./routes/mediaRoutes"));
+app.use("/api/ads", require("./routes/adRoutes"));
 
 app.get("/", (req, res) => {
   res.json({ message: "Ujyaalo Today API is running 🚀" });
